@@ -1,0 +1,9 @@
+conda create --name fastapi-hello python=3.11
+conda activate fastapi-hello
+pip install fastapi uvicorn
+
+
+För att köra lokalt:
+cd /Users/michaelasahlgren/Documents/Adapted_Nameapp
+(Eventuellt pip install -r requirements.txt)
+uvicorn application:application --reload
