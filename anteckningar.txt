@@ -6,4 +6,17 @@ pip install fastapi uvicorn
 För att köra lokalt:
 cd /Users/michaelasahlgren/Documents/Adapted_Nameapp
 (Eventuellt pip install -r requirements.txt)
+conda activate nameapp
 uvicorn application:application --reload
+
+
+KÖRA PÅ AMAZON:
+Skapa ny applikation:
+eb init
++ välj region + "new application" + namn + plattform Python 3.11
+
+Skapa ny environment:
+eb create nameapp-env --instance_type t3.micro --single
+
+
+Går att ha flera environment för samma application
