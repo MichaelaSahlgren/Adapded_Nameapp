@@ -14,9 +14,24 @@ KÖRA PÅ AMAZON:
 Skapa ny applikation:
 eb init
 + välj region + "new application" + namn + plattform Python 3.11
+Det är här man väljer vilken environment, alltså namnet på denna som man vill köra applikationen på. Eller??? Dubbelkolla detta
 
-Skapa ny environment:
-eb create nameapp-env --instance_type t3.micro --single
+Ta bort applikation:
+Ta bort på amazon interface + lokalt genom rm -rf .elasticbeanstalk
+
+
+UPPDATERA KOD I APPLICATION PÅ AMAZON:
+eb deploy
+UTAN hänsyn till git: eb deploy --staged 
+
+eb open
+
+SKAPA NY/RADERA ENVIROMENT:
+eb create adaptednameapp-env --instance_type t3.micro --single
+eb terminate adaptednameapp-env
+
 
 
 Går att ha flera environment för samma application
+
+
